@@ -29,7 +29,7 @@
 	   
 
 
-<table>
+<table id="comprobantePDF-XML" class="comprobantePDF-XML">
 <tr>
 <th>SERIE</th> <th>FOLIO</th> <th>CLIENTE</th> <th>Razon Social</th> <th>PDF</th> <th>XML</th>
 </tr>
@@ -43,8 +43,8 @@ for(Documento obj:lista ){
   <td> <%= obj.getFolio() %> </td>   
   <td> <%= obj.getRfc() %> </td>  
   <td> <%= obj.getRazon() %> </td>
-  <td><a href="showPDF.jsp"><img src="img/pdf.bmp"></a></td> 
-  <td><a href="showXML.jsp"><img src="img/xml.bmp"></a></td>
+  <td><a href="showPDF.jsp"><img src="img/im_Pdf.bmp"></a></td> 
+  <td><a href="showXML.jsp"><img src="img/im_Xml.bmp"></a></td>
   
   
 <%--   <td><a href="showPDF.jsp?serie= <%=obj.getSerie()%>?folio= <%=obj.getFolio()%>"/> PDF </a></td> --%>
