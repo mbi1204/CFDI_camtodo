@@ -28,45 +28,45 @@
 	<h1>COMPROBANTES FISCALES DIGITALES POR INTERNET</h1>
 	   
 
+	<div id="tablaConsulta" class="tablaConsulta">
+		<table id="comprobantePDF-XML" class="comprobantePDF-XML" border="1">
+		<tr>
+		<th>Serie</th> <th>Folio</th> <th>Cliente</th> <th>Razon Social</th> <th>PDF</th> <th>XML</th>
+		</tr>
+		
+		<%
+		List<Documento> lista = (List<Documento>)session.getAttribute("ListaDocumento");
+		for(Documento obj:lista ){
+		%>
+		  <tr>
+		  <td> <%= obj.getSerie() %> </td>
+		  <td> <%= obj.getFolio() %> </td>   
+		  <td> <%= obj.getRfc() %> </td>  
+		  <td> <%= obj.getRazon() %> </td>
+		  <td><a href="showPDF.jsp"><img src="img/im_Pdf.bmp"></a></td> 
+		  <td><a href="showXML.jsp"><img src="img/im_Xml.bmp"></a></td>
+		  
+		  
+		<%--   <td><a href="showPDF.jsp?serie= <%=obj.getSerie()%>?folio= <%=obj.getFolio()%>"/> PDF </a></td> --%>
+		  
+		<%--   <td><a href="showXML.jsp?serie =<%= obj.getSerie() %>"/>XML </a></td> --%>
+		  
+		 
+		  
+		<%--   <td><a href="<%= request.getContextPath() %>/showFile.jsp?file=<s:property value="contador"/>" target="_blank">Archivo</a></td> --%>
+		<%--   <td><a href="<%= request.getContextPath() %>/showFile.jsp?file=<s:property value="contador"/>" target="_blank">Archivo</a></td> --%>
+		  
+		 
+		  </tr>
+		   
+		<%	
+		}
+		%>
+		
+		
+		</table>
 
-<table id="comprobantePDF-XML" class="comprobantePDF-XML">
-<tr>
-<th>SERIE</th> <th>FOLIO</th> <th>CLIENTE</th> <th>Razon Social</th> <th>PDF</th> <th>XML</th>
-</tr>
-
-<%
-List<Documento> lista = (List<Documento>)session.getAttribute("ListaDocumento");
-for(Documento obj:lista ){
-%>
-  <tr>
-  <td> <%= obj.getSerie() %> </td>
-  <td> <%= obj.getFolio() %> </td>   
-  <td> <%= obj.getRfc() %> </td>  
-  <td> <%= obj.getRazon() %> </td>
-  <td><a href="showPDF.jsp"><img src="img/im_Pdf.bmp"></a></td> 
-  <td><a href="showXML.jsp"><img src="img/im_Xml.bmp"></a></td>
-  
-  
-<%--   <td><a href="showPDF.jsp?serie= <%=obj.getSerie()%>?folio= <%=obj.getFolio()%>"/> PDF </a></td> --%>
-  
-<%--   <td><a href="showXML.jsp?serie =<%= obj.getSerie() %>"/>XML </a></td> --%>
-  
- 
-  
-<%--   <td><a href="<%= request.getContextPath() %>/showFile.jsp?file=<s:property value="contador"/>" target="_blank">Archivo</a></td> --%>
-<%--   <td><a href="<%= request.getContextPath() %>/showFile.jsp?file=<s:property value="contador"/>" target="_blank">Archivo</a></td> --%>
-  
- 
-  </tr>
-   
-<%	
-}
-%>
-
-
-</table>
-
-
+</div>
 
 <div style="clear:both; height: 40px"></div>
 </div><!-- close container -->

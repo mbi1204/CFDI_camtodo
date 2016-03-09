@@ -59,6 +59,18 @@ input {
 	float: centrer;
  	overflow:hidden;
 }
+.tablaConsulta{
+	text-align: left;
+}
 .comprobantePDF-XML{
-	
+	width:65%;
+	margin: 0 auto;
+	text-align: center;
+	border: 10px;
+	border-color: black;
+}
+th{
+	margin: 0 auto;
+	text-align: center;
+	border-color: black;
 }
