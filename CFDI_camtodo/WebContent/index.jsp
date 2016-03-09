@@ -15,7 +15,7 @@
 <body onload="cargar()">
 
 <div id = "banner" class = "banner">
-	<div id = "logo" class = "logo"><img class = "logoEmpresa" src="img/logo.jpg" alt="Camiseria TODO"></div>
+	<div id = "logo" class = "logo"><a href="/CFDI_camtodo"><img class = "logoEmpresa" src="img/logo.jpg" alt="Camiseria TODO"></a></div>
 	<div id = "slider" class = "slider">
 		<img src="img/slider.png">  		
 	</div>
@@ -77,13 +77,13 @@
 	<div style="clear:both; height: 40px"></div>
 </div><!-- close container -->
 
-<div id="footer">
+<!--  <div id="footer">
 <div class="one-fourth last">
         <p>Siguenos en:</p>
         <a href="https://www.facebook.com/Camiseria-Todo-232680530197687/timeline?ref=page_internal" target="_blank"><img src="img/facebook-icon.png" alt="Facebook" width="32px" height="32px"></a>
         <a href="https://twitter.com/CamiseriaTodo" target="_blank"><img src="img/twitter-icon.png" alt="Twitter" width="32px" height="32px"></a>
 		<div id="social_icons">Sitio Administrado por: <a href="#">www.sinergitec.com</a><br />e-mail: <a href="#" title="Dieter Schneider Photography">soporte@sinergitec.mx</a></div>
-</div>
+</div> -->
 
 <div style="clear:both"></div>
   
