@@ -86,8 +86,8 @@
 </div> -->
 
 <div style="clear:both"></div>
-  
-</div> <!-- END footer -->
+
+<!-- </div> END footer -->
 
 <div align="center"><!-- Main Menu -->
       
@@ -96,6 +96,7 @@
 
 <script type="text/javascript" src="js/view/index.js"></script>
 <script type="text/javascript" src="js/css/template.js"></script>
+<script type="text/javascript" src="js/lib/jquery-3.1.0.js"></script>
 
 
 </body>

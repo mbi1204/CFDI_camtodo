@@ -55,8 +55,8 @@ input {
     margin: 0 0 10px 0;
 }
 .boton{
+	margin: 0 auto;
 	padding: 10px 35px;
-	float: centrer;
  	overflow:hidden;
 }
 .tablaConsulta{
