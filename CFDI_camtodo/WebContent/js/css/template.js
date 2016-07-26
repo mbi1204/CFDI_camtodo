@@ -1,7 +1,7 @@
 /**
  * 
  */
-$('.slider').slider({
+$('#slider').slider({
   mode: 'fade',
   captions: true
 });
