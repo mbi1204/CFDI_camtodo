@@ -5,7 +5,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import camtodo.sinergitec.app.AppServer;
 import com.progress.open4gl.BooleanHolder;
 import com.progress.open4gl.Open4GLException;
 import com.progress.open4gl.ProResultSet;
@@ -15,6 +14,8 @@ import com.progress.open4gl.javaproxy.Connection;
 import com.sinergitec.cfdi.util.DBConexion;
 import com.sinergitec.dao.DocumentoDB;
 import com.sinergitec.model.Documento;
+
+import camtodo.sinergitec.app.AppServer;
 
 public class DocumentoDBImpl implements DocumentoDB {
 
