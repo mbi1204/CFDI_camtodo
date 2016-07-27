@@ -67,9 +67,9 @@
 	
 	 <div class="one-half last" align="center">
 	 
-	<h2 style="color: #000;">Los datos se encuentran en su ticket de compra. </h2>
+	<!--  <h2 style="color: #000;">Los datos se encuentran en su ticket de compra. </h2> -->
 	<p style="color: #000;">&nbsp;</p>
-	<img src="img/ticket.jpg" width="500px" height="200px" >
+	<!-- <img src="img/ticket.jpg" width="500px" height="200px" > -->
 	 
   	</div>
 
