@@ -52,7 +52,7 @@ public class CFDI extends HttpServlet {
 		// TODO Auto-generated method stub
 		System.out.println("Entro en el doPost");
 		
-		String rfc   = request.getParameter("rfc");
+		String cliente   = request.getParameter("rfc");
 		String serie = request.getParameter("serie");
 		int folio    = Integer.parseInt (request.getParameter("folio"));
 		
@@ -64,11 +64,11 @@ public class CFDI extends HttpServlet {
 			documento.clear();
 			
 						
-			documento = 	documentoDB.cargaDigitales(rfc, serie, folio);
+			documento = 	documentoDB.cargaDigitales(cliente, serie, folio);
 			
 									
 			if (! documento.isEmpty())  {
-				System.out.println("ok se encontro el cfdi " +  ahora + " "+ rfc  + " " + serie + " " + folio );					
+				System.out.println("ok se encontro el cfdi " +  ahora + " "+ cliente  + " " + serie + " " + folio );					
 				HttpSession session = request.getSession(true);
 				session.setAttribute("ListaDocumento", null);  
 				session.setAttribute("serie", null);  
@@ -78,7 +78,7 @@ public class CFDI extends HttpServlet {
 				session.setAttribute("folio",folio );				
 				request.getRequestDispatcher("/consulta.jsp").forward(request, response);
 			}else {
-				System.out.println("no se encontro el cfdi" +  ahora + " "+ rfc  + " " + serie + " " + folio);
+				System.out.println("no se encontro el cfdi" +  ahora + " "+ cliente  + " " + serie + " " + folio);
 				request.setAttribute("error", "No se Encontro el CFDI Revise sus Datos");  
 				request.getRequestDispatcher("").forward(request, response);	
 				

@@ -34,7 +34,7 @@
 	    	</tr>
 	    	
 	    	<tr>
-	    		<td style="size: 12px; margin:auto;" align="right" >RFC:</td>
+	    		<td style="size: 12px; margin:auto;" align="right" >CLIENTE:</td>
 	    		<td><input type="text" name="rfc" id="rfc" style="width:336px"></td>
 	    	</tr>
 	    	
