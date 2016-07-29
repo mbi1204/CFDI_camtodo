@@ -41,8 +41,13 @@
 		  <td> <%= obj.getFolio() %> </td>   
 		  <td> <%= obj.getRfc()   %> </td>  
 		  <td> <%= obj.getRazon() %> </td>
-		  <td><a href="showPDF.jsp"><img src="img/im_Pdf.bmp"></a></td> 
-		  <td><a href="showXML.jsp"><img src="img/im_Xml.bmp"></a></td>
+		  <!-- <td><a href="showPDF.jsp"><img src="img/im_Pdf.bmp"></a></td> -->
+		  <!-- <td><a href="showXML.jsp"><img src="img/im_Xml.bmp"></a></td> -->
+		  <td><a href="PDF"><img src="img/im_Pdf.bmp"></a></td>
+		  <td><a href="XML"><img src="img/im_Xml.bmp"></a></td> 
+		  
+		  
+		  
 		  
 		  
 		<%--   <td><a href="showPDF.jsp?serie= <%=obj.getSerie()%>?folio= <%=obj.getFolio()%>"/> PDF </a></td> --%>

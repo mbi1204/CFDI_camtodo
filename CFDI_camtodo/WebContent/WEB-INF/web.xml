@@ -10,4 +10,16 @@
     <servlet-name>CFDI</servlet-name>
     <servlet-class>com.sinergitec.control.CFDI</servlet-class>
   </servlet>
+  <servlet>
+    <description></description>
+    <display-name>PDF</display-name>
+    <servlet-name>PDF</servlet-name>
+    <servlet-class>com.sinergitec.control.PDF</servlet-class>
+  </servlet>
+  <servlet>
+    <description></description>
+    <display-name>XML</display-name>
+    <servlet-name>XML</servlet-name>
+    <servlet-class>com.sinergitec.control.XML</servlet-class>
+  </servlet>
 </web-app>
