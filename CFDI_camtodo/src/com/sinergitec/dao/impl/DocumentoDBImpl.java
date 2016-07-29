@@ -22,12 +22,6 @@ public class DocumentoDBImpl implements DocumentoDB {
 	@SuppressWarnings("static-access")
 	public List<Documento> cargaDigitales(String cliente , String Serie , Integer Folio ) throws Open4GLException, IOException{
 		
-		System.out.println("Entro en el DAO Implements");
-		
-		System.out.println("Este es cliente: "+cliente);
-		System.out.println("Esta es la serie: "+Serie);
-		System.out.println("Este es el folio: "+Folio);
-		
 		List<Documento> al_Documento = new ArrayList<Documento>();
 		ResultSetHolder ttDocumento  = new ResultSetHolder();
 		
@@ -39,14 +33,9 @@ public class DocumentoDBImpl implements DocumentoDB {
 	
 		try {
 			
-			
-			
 			app.as_consultacfdi_01(cliente, Serie, Folio, ttDocumento, error, texto);
 			ProResultSet rs = (ProResultSet) ttDocumento.getResultSetValue();
-			System.out.println(error.getValue());
-			System.out.println(texto.getValue());
 			
-					
 			while (rs.next()) {
 				int i = 1;			
 				Documento documento = new Documento();

@@ -2,7 +2,6 @@ package com.sinergitec.control;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -40,9 +39,6 @@ public class CFDI extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
-		
-		System.out.println("entro doGet");
-		
 	}
 
 	/**
@@ -57,44 +53,29 @@ public class CFDI extends HttpServlet {
 		int folio    = Integer.parseInt (request.getParameter("folio"));
 		
 		try {
-			
-			Date ahora = new Date();
-			
 			List<Documento> documento =  new ArrayList<Documento>();
 			documento.clear();
-			
-						
 			documento = 	documentoDB.cargaDigitales(cliente, serie, folio);
-			
 									
-			if (! documento.isEmpty())  {
-				System.out.println("ok se encontro el cfdi " +  ahora + " "+ cliente  + " " + serie + " " + folio );					
+			if (! documento.isEmpty()){
 				HttpSession session = request.getSession(true);
-				session.setAttribute("ListaDocumento", null);  
+				/*session.setAttribute("ListaDocumento", null);  
 				session.setAttribute("serie", null);  
-				session.setAttribute("folio", null);  
-				session.setAttribute("ListaDocumento",documento );
+				session.setAttribute("folio", null);*/  
+				session.setAttribute("ListaDocumento",documento);
 				session.setAttribute("serie",serie );
 				session.setAttribute("folio",folio );				
 				request.getRequestDispatcher("/consulta.jsp").forward(request, response);
 			}else {
-				System.out.println("no se encontro el cfdi" +  ahora + " "+ cliente  + " " + serie + " " + folio);
 				request.setAttribute("error", "No se Encontro el CFDI Revise sus Datos");  
 				request.getRequestDispatcher("").forward(request, response);	
-				
 			} 
 			
 		} catch (Open4GLException e) {
 			// TODO Auto-generated catch block
-			 
 			e.printStackTrace();
 			request.setAttribute("error",   e.getMessage());		
 			request.getRequestDispatcher("/consulta.jsp").forward(request, response);	
-			
-			
 		}
-		
-		
 	}
-
 }

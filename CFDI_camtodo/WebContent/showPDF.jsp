@@ -16,8 +16,8 @@
   int    folio  =  Integer.parseInt(session.getAttribute("folio").toString());
 
   for(Documento obj: lista) {
-	  /*response.setContentType("application/pdf");*/
-	  /*response.setHeader("Content-Disposition", "inline;filename="+ obj.getSerie() + obj.getFolio() );*/
+	  response.setContentType("application/pdf");
+	  response.setHeader("Content-Disposition", "inline;filename="+ obj.getSerie() + obj.getFolio() );
 
 	  if((obj.getFolio() == folio) &&  (obj.getSerie().equals(serie)) ) {
 		  response.setContentType("pdf/plain");
