@@ -24,19 +24,14 @@
 	  response.setHeader("Content-Disposition", "inline;filename="+ obj.getSerie() + obj.getFolio() );
 
 	  if((obj.getFolio() == folio) &&  (obj.getSerie().equals(serie)) ) {
-		  try {
-			  response.setContentType("pdf/plain");
-			  response.setHeader("Content-Type", "application/pdf");
-			  response.setHeader("Content-Disposition", "attachment;filename="+ obj.getSerie() + obj.getFolio() + ".pdf" );
-			  response.setContentLength((int)obj.getPdf().length);
-			  response.setHeader("Content-Length", String.valueOf(obj.getPdf().length));
-			  response.getOutputStream().write(obj.getPdf(), 0, obj.getPdf().length);
-			} catch (Exception e) {
-			    e.printStackTrace();
-			} finally {
-			    response.flushBuffer();
-			    response.getOutputStream().close();
-			}  
+		  response.setContentType("pdf/plain");
+		  response.setHeader("Content-Type", "application/pdf");
+		  response.setHeader("Content-Disposition", "attachment;filename="+ obj.getSerie() + obj.getFolio() + ".pdf" );
+		  response.setContentLength((int)obj.getPdf().length);
+		  response.setHeader("Content-Length", String.valueOf(obj.getPdf().length));
+		  response.getOutputStream().write(obj.getPdf(), 0, obj.getPdf().length);
+		  response.getOutputStream().flush();
+
 		  break;
 		}
 	  } 
