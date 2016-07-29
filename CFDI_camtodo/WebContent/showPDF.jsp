@@ -26,7 +26,7 @@
 		  response.setContentLength((int)obj.getPdf().length);
 		  response.setHeader("Content-Length", String.valueOf(obj.getPdf().length));
 		  response.getOutputStream().write(obj.getPdf(), 0, obj.getPdf().length);
-		  response.flushBuffer();
+		  //response.flushBuffer();
 		  break;
 		}
 	  } 
