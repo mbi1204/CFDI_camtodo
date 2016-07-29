@@ -61,7 +61,7 @@
 		}
 		%>
 		</table>
-		<input style="margin-top:50px; margin-left: 675px;" type="button" onclick="location.href='/CFDI_camtodo';" value="Realiza otra consulta" />
+		<input style="display: block; margin-left: auto; margin-right: auto; margin-top: 50px;" type="button" onclick="location.href='/CFDI_camtodo';" value="Realiza otra consulta" />
 		
 
 </div>
@@ -78,7 +78,6 @@
 </div> -->
 
 <div style="clear:both"></div>
-  
-</div> <!-- END footer -->
+<!-- </div> END footer -->
 </body>
 </html>
