@@ -19,6 +19,7 @@ import camtodo.sinergitec.app.AppServer;
 
 public class DocumentoDBImpl implements DocumentoDB {
 
+	@SuppressWarnings("static-access")
 	public List<Documento> cargaDigitales(String cliente , String Serie , Integer Folio ) throws Open4GLException, IOException{
 		
 		System.out.println("Entro en el DAO Implements");
@@ -31,7 +32,6 @@ public class DocumentoDBImpl implements DocumentoDB {
 		ResultSetHolder ttDocumento  = new ResultSetHolder();
 		
 		Connection conexion = new DBConexion().getConnection();
-		System.out.println("Truena");
 		AppServer app = new AppServer(conexion);
 		
 		StringHolder  texto  = new StringHolder();
