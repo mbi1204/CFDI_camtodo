@@ -1,5 +1,7 @@
 <%@page import="com.sinergitec.model.Documento"%>
 <%@page import="java.util.List"%>
+<%@page import= "java.io.InputStream" %>
+<%@page import= "java.io.ByteArrayInputStream" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -26,7 +28,15 @@
 		  response.setContentLength((int)obj.getPdf().length);
 		  response.setHeader("Content-Length", String.valueOf(obj.getPdf().length));
 		  response.getOutputStream().write(obj.getPdf(), 0, obj.getPdf().length);
-		  //response.flushBuffer();
+		  response.flushBuffer();
+		  
+		  // get your file as InputStream
+			//InputStream pdf = new ByteArrayInputStream(obj.getPdf());
+
+		  // copy it to response's OutputStream
+			//org.apache.commons.io.IOUtils.copy(pdf, response.getOutputStream());
+			//response.flushBuffer();
+		  
 		  break;
 		}
 	  } 
