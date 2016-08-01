@@ -13,7 +13,7 @@ function validar(){
 	var folio = document.getElementById("folio");
 	
 	if (rfc.value == "" || rfc.value == '' || rfc.value == null ){
-		alert("Ingresa RFC");
+		alert("Ingresa Cliente");
 		rfc.focus();
 		return false;
 		

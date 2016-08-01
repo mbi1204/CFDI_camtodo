@@ -25,7 +25,7 @@
 
 	<div id="site_title" class = "site_title"><a href="index.html"></a></div>
 	
-	<h1>En Camiseria TODO estamos para atenderte.</h1>
+	<!-- <h1>En Camiseria TODO estamos para atenderte.</h1> -->
 	<div class="one-half last" > 	
 	  <form action="CFDI" method="post" onsubmit="return validar();" name="form1" >
    	    <table style="margin: auto;" >
