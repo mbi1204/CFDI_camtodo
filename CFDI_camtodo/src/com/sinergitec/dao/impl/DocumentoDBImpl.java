@@ -19,7 +19,7 @@ import camtodo.sinergitec.app.AppServer;
 
 public class DocumentoDBImpl implements DocumentoDB {
 
-	@SuppressWarnings("static-access")
+	@SuppressWarnings("static-access") 
 	public List<Documento> cargaDigitales(String cliente , String Serie , Integer Folio ) throws Open4GLException, IOException{
 		
 		List<Documento> al_Documento = new ArrayList<Documento>();
